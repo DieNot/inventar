@@ -1,0 +1,25 @@
+<div class="border-bottom border-top row">
+    <img src="assets/desktop.svg" class="rounded-circle p-1">
+    <span class="col">
+        <p class="row definition">Name</p>
+        {{ computer.name }}
+    </span>
+    <span class="col">
+        <p class="row definition">Anlangennummer</p>
+        {{ computer.anlagennr }} </span>
+    <span class="col">
+        <p class="row definition">Model</p>
+        {{ computer.modelname }}</span>
+    <span class="col">
+        <p class="row definition">Seriennummer</p>
+        {{ computer.snr }}</span>
+    <span class="col">
+        <p class="row definition">Besitzer</p>
+        {{ computer.owner }}</span>
+    <span class="col">
+        <p class="row definition">Zimmer</p>
+        {{ computer.room }}</span>
+</div>
+<div class="screens">
+    <screen-comp *ngFor="let screen of computer.screens" [screen]="screen"></screen-comp>
+</div>
